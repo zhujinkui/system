@@ -1,10 +1,10 @@
 <template>
-    <div id="lx-body" class="lx-admin-user-login">
+    <div id="lx-body" class="lx-admin-user-login" :style="{width:autoWidth+'px',height:autoHeight+'px'}">
         <div id="lx-loginAction" class="lx-contents animated fadeIn" style="margin: -240px 0px 0px -484px;">
             <div id="lx-content-box">
                 <div id="lx-news-box">
                     <div class="lx-news-image"><span class="logo"></span>
-                        <a class="lx-news-text-bar" href="javascript:;" target="_blank">Sass钱包仅需5分钟便可部署一个支持去中心化的钱包，无单点故障问题</a>
+                        <a class="lx-news-text-bar" href="javascript:;" target="_blank">Sass钱包仅需5分钟便可部署一个支持去中心化的钱包，无单点故障问题{{ autoHeight }}</a>
                     </div>
                     <ul class="lx-login-guide">
                         <li>
@@ -122,7 +122,35 @@
     </div>
 </template>
 
-<script setup lang="ts">
-import "@/assets/css/login.css";
+<script>
+export default {
+    data() {
+        return {
+            autoWidth: '1920px',
+            autoHeight: '937px'
+        }
+    },
+    created() {
+        this.autoWidth = window.innerWidth
+        this.autoHeight = window.innerHeight
+    },
+    mounted() {
+        //初始化获取浏览器宽度和高度
+        this.autoWidth = window.innerWidth
+        this.autoHeight = window.innerHeight
+
+        //实时改变浏览器宽度和高度
+        window.onresize = () => {
+            return (() => {
+                this.autoWidth = window.innerWidth
+                this.autoHeight = window.innerHeight
+            })();
+        };
+    }
+}
 
 </script>
+
+<style>
+@import "@/assets/css/login.css";
+</style>
