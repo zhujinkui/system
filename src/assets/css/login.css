@@ -1,0 +1,387 @@
+.lx-admin-user-login {
+    background: url("https://www.eea.europa.eu/highlights/eight-facts-about-europe2019s-forest-ecosystems/image_panoramic") no-repeat #000 top;
+    height: 100%;
+    width: 100%;
+}
+
+#lx-loginAction {
+    position: absolute;
+    padding: 0;
+    left: 50%;
+    overflow: hidden;
+    top: 50%;
+}
+
+#lx-loginAction #lx-content-box {
+    width: auto;
+    margin: 0 auto;
+    color: #bbb;
+    clear: both;
+    height: auto;
+}
+
+/*提示*/
+#lx-loginAction #lx-content-box #lx-news-box {
+    background-color: rgba(0, 0, 0, .3);
+    float: left;
+    width: 568px;
+    min-height: 240px;
+}
+
+#lx-loginAction #lx-content-box #lx-news-box .lx-login-guide li .iconfont {
+    width: 20px;
+    height: 20px;
+    background: #008ced;
+    color: #fff;
+    display: inline-block;
+    text-align: center;
+    line-height: 20px;
+    margin-right: 14px;
+    border-radius: 20px;
+    vertical-align: middle;
+    font-size: 14px;
+}
+
+#lx-loginAction #lx-content-box #lx-news-box .logo {
+    padding: 0;
+    margin: 30px 0 15px 25px;
+    text-indent: 9999px;
+    display: block;
+    box-sizing: content-box;
+    width: 180px;
+    height: 40px;
+    overflow: hidden;
+    background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDIyLjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IuWbvuWxgl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIKCSB2aWV3Qm94PSIwIDAgODg4LjUgMTQ4LjEiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDg4OC41IDE0OC4xOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+Cgkuc3Qwe2ZpbGw6I0ZGRkZGRjt9Cgkuc3Qxe2ZpbGw6I0ZGRkZGRjtzdHJva2U6I0ZGRkZGRjtzdHJva2Utd2lkdGg6OTtzdHJva2UtbWl0ZXJsaW1pdDoxMDt9Cjwvc3R5bGU+CjxnPgoJPHRpdGxlPuaWsGxvZ28t55m96ImyPC90aXRsZT4KCTxnPgoJCTxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik04NDkuMSwyLjljNS43LDAsMTEuMywxLjUsMTYuMyw0LjNjNS4yLDIuOCw5LjUsNy4xLDEyLjMsMTIuM2M1LjksMTAuMiw1LjksMjIuOCwwLjEsMzMuMQoJCQljLTIuOCw1LjItNy4xLDkuNC0xMi4yLDEyLjNjLTEwLjIsNS44LTIyLjgsNS44LTMzLDBjLTUuMi0yLjgtOS40LTcuMS0xMi4zLTEyLjNjLTUuOS0xMC4yLTUuOS0yMi45LDAuMS0zMy4xCgkJCWMyLjktNS4yLDcuMi05LjUsMTIuNC0xMi4zQzgzNy44LDQuNCw4NDMuNCwyLjksODQ5LjEsMi45eiBNODQ5LjEsOC40Yy00LjgsMC05LjQsMS4zLTEzLjYsMy42Yy00LjQsMi4zLTcuOSw1LjktMTAuMywxMC4yCgkJCWMtNSw4LjUtNSwxOS0wLjEsMjcuNmMyLjQsNC4zLDUuOSw3LjksMTAuMywxMC4yYzguNSw0LjksMTksNC45LDI3LjUsMGM0LjMtMi40LDcuOS01LjksMTAuMi0xMC4yYzQuOS04LjYsNC45LTE5LjEtMC4xLTI3LjYKCQkJYy0yLjQtNC4zLTYtNy45LTEwLjMtMTAuMkM4NTguNSw5LjYsODUzLjksOC40LDg0OS4xLDguNHogTTgzNC42LDU0LjRWMTguN2gxMi4zYzQuMiwwLDcuMiwwLjMsOS4xLDFjMS44LDAuNiwzLjQsMS44LDQuNSwzLjUKCQkJYzEuMSwxLjUsMS43LDMuNCwxLjcsNS4yYzAsMi42LTEsNS0yLjgsNi44Yy0yLDItNC42LDMuMS03LjQsMy4yYzEuMSwwLjQsMi4xLDEuMSwzLDEuOWMyLDIuMiwzLjgsNC41LDUuMyw3LjFsMi4yLDMuNWwyLjIsMy41CgkJCWgtN2wtMy4yLTUuNmMtMi41LTQuNC00LjUtNy4yLTYtOC4zYy0xLjQtMC45LTMtMS4zLTQuNi0xLjJoLTMuNHYxNS4yTDgzNC42LDU0LjR6IE04NDAuMywzNC4zaDdjMy4zLDAsNS42LTAuNSw2LjgtMS41CgkJCWMxLjItMSwxLjktMi40LDEuOC0zLjljMC0xLTAuMy0yLTAuOS0yLjhjLTAuNi0wLjgtMS41LTEuNS0yLjQtMS45Yy0xLjktMC41LTMuOC0wLjctNS44LTAuNmgtNi41TDg0MC4zLDM0LjNMODQwLjMsMzQuM3oiLz4KCQk8Zz4KCQkJPHBhdGggY2xhc3M9InN0MSIgZD0iTTExNi40LDE0MS41TDkzLjgsNTAuOWgtMC40bC0yMi4yLDkwLjdINDEuNkw2LjMsOC4zaDI5LjNMNTYuNyw5OUg1N0w4MC4yLDguM2gyNy40bDIyLjgsOTEuOGgwLjQKCQkJCWwyMS44LTkxLjhoMjguN2wtMzUuOCwxMzMuMkgxMTYuNHoiLz4KCQkJPHBhdGggY2xhc3M9InN0MSIgZD0iTTI2NC4xLDguM0wzMTQsMTQxLjVoLTMwLjRsLTEwLjEtMjkuN2gtNDkuOGwtMTAuNCwyOS43aC0yOS41TDIzNC4xLDguM0gyNjQuMXogTTI2NS44LDkwLjFMMjQ5LDQxLjJoLTAuNAoJCQkJbC0xNy40LDQ4LjlIMjY1Ljh6Ii8+CgkJCTxwYXRoIGNsYXNzPSJzdDEiIGQ9Ik0zNjIuMyw4LjN2MTA4LjZoNjQuOXYyNC42SDMzM1Y4LjNIMzYyLjN6Ii8+CgkJCTxwYXRoIGNsYXNzPSJzdDEiIGQ9Ik00ODAuNCw4LjN2MTA4LjZoNjQuOXYyNC42aC05NC4yVjguM0g0ODAuNHoiLz4KCQkJPHBhdGggY2xhc3M9InN0MSIgZD0iTTY2OC44LDguM1YzM2gtNzAuM3YyOC41SDY2M3YyMi44aC02NC42djMyLjdoNzEuOHYyNC42SDU2OS4yVjguM0g2NjguOHoiLz4KCQkJPHBhdGggY2xhc3M9InN0MSIgZD0iTTY4Ny4xLDMzVjguM2gxMDkuMVYzM2gtMzkuOXYxMDguNkg3MjdWMzNINjg3LjF6Ii8+CgkJPC9nPgoJPC9nPgo8L2c+Cjwvc3ZnPgo=);
+    background-position: 0 3px;
+    background-repeat: no-repeat;
+}
+
+#lx-loginAction #lx-content-box #lx-news-box .lx-news-text-bar {
+    width: 100%;
+    line-height: 38px;
+    font-size: 14px;
+    display: block;
+    padding-left: 25px;
+}
+
+#lx-loginAction #lx-content-box #lx-news-box a {
+    font-size: 12px;
+    color: #bbb;
+}
+
+[role=button], a, area, button, input:not([type=range]), label, select, summary, textarea {
+    touch-action: manipulation;
+}
+
+a {
+    color: #1890ff;
+    background-color: transparent;
+    text-decoration: none;
+    outline: none;
+    cursor: pointer;
+    transition: color .3s;
+    -webkit-text-decoration-skip: objects;
+}
+
+#lx-loginAction #lx-content-box #lx-news-box {
+    background-color: rgba(0, 0, 0, .3);
+    float: left;
+    width: 568px;
+    min-height: 240px;
+}
+
+#lx-loginAction #lx-content-box #lx-news-box .lx-login-guide {
+    background: transparent;
+    margin: 15px 0 0 25px;
+    padding: 0;
+    text-align: left;
+}
+
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
+#lx-loginAction #lx-content-box #lx-news-box .lx-login-guide li {
+    display: inline-block;
+    width: 100%;
+    font-size: 12px;
+    padding: 8px 0;
+}
+
+#lx-loginAction #lx-content-box #lx-news-box .lx-login-guide li:first-child .iconfont, #lx-loginAction #lx-content-box #lx-news-box .lx-login-guide li:nth-child(3) .iconfont {
+    padding-left: 1px;
+}
+
+#lx-loginAction #lx-content-box #lx-news-box .lx-login-guide li .iconfont {
+    width: 20px;
+    height: 20px;
+    background: #008ced;
+    color: #fff;
+    display: inline-block;
+    text-align: center;
+    line-height: 20px;
+    margin-right: 14px;
+    border-radius: 20px;
+    vertical-align: middle;
+    font-size: 14px;
+}
+
+.iconfont {
+    font-family: iconfont !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+#lx-loginAction #lx-content-box #lx-news-box a {
+    font-size: 12px;
+    color: #bbb;
+}
+
+#lx-loginAction #lx-content-box #lx-login-box #lx-login-title {
+    text-align: center;
+    font-size: 18px;
+    line-height: 42px;
+    color: #000;
+    border-bottom: 2px solid #cde;
+}
+
+#lx-loginAction #lx-content-box #lx-login-box #lx-login-form-box {
+    padding: 25px 0 0;
+}
+
+/*登录*/
+#lx-loginAction #lx-content-box #lx-login-box {
+    float: right;
+    width: 360px;
+    padding: 30px;
+    background: #fcfcfc;
+    min-height: 240px;
+    margin-left: 20px;
+    position: relative;
+}
+
+form {
+    display: block;
+    margin-top: 0em;
+}
+
+#lx-loginAction #lx-content-box #lx-login-box #lx-login-form-box .login-form .ant-form-item {
+    margin-bottom: 20px;
+}
+
+.ant-row {
+    position: relative;
+    margin-left: 0;
+    margin-right: 0;
+    height: auto;
+    zoom: 1;
+    display: block;
+    box-sizing: border-box;
+}
+
+.ant-row:after, .ant-row:before {
+    content: " ";
+    display: table;
+}
+
+.ant-input-affix-wrapper {
+    font-family: Monospaced Number, Chinese Quote, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Helvetica Neue, Helvetica, Arial, sans-serif !important;
+    font-size: 12px;
+    line-height: 1.5;
+    color: #666;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.ant-row:after, .ant-row:before {
+    content: " ";
+    display: table;
+}
+
+.ant-row:after {
+    clear: both;
+    visibility: hidden;
+    font-size: 0;
+    height: 0;
+}
+
+#lx-loginAction #lx-content-box #lx-login-box #lx-login-form-box .ant-input-affix-wrapper .ant-input-prefix {
+    left: 5px;
+}
+
+.ant-input-affix-wrapper .ant-input-prefix {
+    left: 12px;
+}
+
+.ant-input-affix-wrapper .ant-input-prefix, .ant-input-affix-wrapper .ant-input-suffix {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    line-height: 0;
+    color: #666;
+}
+
+.ant-input-affix-wrapper .ant-input-prefix :not(.anticon), .ant-input-affix-wrapper .ant-input-suffix :not(.anticon) {
+    line-height: 1.5;
+}
+
+.icon-password, .icon-user {
+    color: #8dcbf3;
+}
+
+.icon-password, .icon-safe, .icon-user {
+    font-size: 18px;
+}
+
+.iconfont {
+    font-family: iconfont !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.ant-input-affix-wrapper .ant-input {
+    position: static;
+}
+
+.icon-user:before {
+    content: "\E617";
+}
+
+
+element.style {
+}
+
+#lx-loginAction input {
+    background: #fcfcfc;
+    border: none;
+    border-bottom: 1px solid #e6e6e6;
+    border-radius: 0;
+    font-size: 14px;
+    padding-left: 36px;
+}
+
+.ant-input-affix-wrapper .ant-input:not(:first-child) {
+    padding-left: 30px;
+}
+
+.ant-input-affix-wrapper .ant-input {
+    min-height: 100%;
+}
+
+.ant-input-affix-wrapper .ant-input {
+    position: static;
+}
+
+[role=button], a, area, button, input:not([type=range]), label, select, summary, textarea {
+    touch-action: manipulation;
+}
+
+input[type=number], input[type=password], input[type=text], textarea {
+    -webkit-appearance: none;
+}
+
+.ant-input {
+    font-family: Monospaced Number, Chinese Quote, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Helvetica Neue, Helvetica, Arial, sans-serif !important;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: relative;
+    display: inline-block;
+    padding: 4px 11px;
+    width: 100%;
+    height: 32px;
+    font-size: 12px;
+    line-height: 1.5;
+    color: #666;
+    background-color: #fdfdfd;
+    background-image: none;
+    border: 1px solid #d9d9d9;
+    border-radius: 4px;
+    transition: all .3s;
+}
+
+button, input {
+    overflow: visible;
+}
+
+#lx-loginAction input {
+    background: #fcfcfc;
+    border: none;
+    border-bottom: 1px solid #e6e6e6;
+    border-radius: 0;
+    font-size: 14px;
+    padding-left: 36px;
+}
+
+#lx-loginAction #lx-content-box #recommendHttps {
+    text-align: center;
+    clear: both;
+}
+
+#lx-loginAction #lx-content-box #recommendHttps span {
+    color: #f82;
+    line-height: 1.7em;
+    display: block;
+}
+
+#lx-loginAction #lx-login-button {
+    width: 100%;
+    background: #008ced;
+    color: #fff;
+    font-size: 16px;
+    height: 35px;
+    border: none;
+}
+
+.ant-btn, .ant-btn:active, .ant-btn:focus {
+    outline: 0;
+}
+
+.ant-btn {
+    line-height: 1.5;
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    padding: 0 15px;
+    font-size: 12px;
+    border-radius: 4px;
+    height: 32px;
+    user-select: none;
+    transition: all .3s cubic-bezier(.645, .045, .355, 1);
+    position: relative;
+    color: #666;
+    background-color: #fff;
+    border-color: #d9d9d9;
+}
+
+/*尾部*/
+#lx-login-footer {
+    width: 100%;
+    z-index: 99;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    line-height: 60px;
+    color: #50595f;
+}
